@@ -20,22 +20,20 @@ const EventList = () => {
     (!type
       ? data?.events
       : data?.events) || []
-  ).filter((event, index) => {
-    if ((type === undefined || type === null) && ((currentPage - 1) * PER_PAGE <= index && PER_PAGE * currentPage > index)) {
+  ).filter((event) => {
+    if (
+      (!type || event.type === type)
+    ) {
       return true;
     }
-    if (event.type === type) {
+    return false;
+  }).filter((event, index) => {
+    if (
+      (currentPage - 1) * PER_PAGE <= index &&
+      PER_PAGE * currentPage > index
+    ) {
       return true;
     }
-    // if (
-    //   ((currentPage - 1) * PER_PAGE <= index && PER_PAGE * currentPage > index) &&
-    //   (
-    //     (type === undefined || type === null) ||
-    //     event.type === type
-    //   )
-    //   ) {
-    //   return true;
-    // }
     return false;
   });
   const changeType = (evtType) => {
