@@ -59,7 +59,7 @@ const EventList = () => {
             selection={Array.from(typeList)}
             onChange={(newValue) => ( newValue ? changeType(newValue) : changeType(null))}
           />
-          <div id="events" className="ListContainer">
+          <div id="events" className="ListContainer" data-testid="list-events">
             {filteredEvents.map((event) => (
               <Modal key={event.id} Content={<ModalEvent event={event} />}>
                 {({ setIsOpened }) => (

@@ -130,7 +130,7 @@ const Page = () => {
             date={new Date(byDateDesc[0]?.date)}
             small
             label="boom"
-            data-testid="lastEvent"
+            data-testid="last-event"
           />
         )}
         {/* <EventCard
