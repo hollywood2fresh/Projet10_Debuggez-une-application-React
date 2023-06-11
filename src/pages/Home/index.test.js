@@ -28,30 +28,6 @@ describe("When Form is created", () => {
 
 });
 
-
-// describe("When a page is created", () => {
-//   it("a list of people is displayed", async () => {
-//     render(<Home />);
-//     await screen.findByText("Samira");
-//     await screen.findByText("Animateur");
-//     await screen.findByText("Isabelle");
-//   })
-//   it("a list of services is displayed", async () => {
-//     render(<Home />);
-//     await screen.findByText("Conférences");
-//   })
-//   it("a footer is displayed", async () => {
-//     render(<Home />);
-//     await screen.findByText("Contactez-nous");
-//   })
-//   it("an event card, with the last event, is displayed", () => {
-//       render(<Home />);
-//         wait(() => {
-//         expect(screen.getAllByTestId("last-event")).toBeInTheDocument();
-//       });
-//   });
-// });
-
 describe("When a page is created", () => {
   it("a list a people is displayed", async () => {
     render(<Home />);
